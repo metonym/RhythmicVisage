@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+dist/
+.astro
+.env
+
+# Ignore the raw streaming history files as they would reqiure Git LFS.
+# I also have not redacted any personal information from these files.
+server/data/streaming-history

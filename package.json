@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun server/app.ts",
+    "dev:server": "bun --hot server/app.ts",
+    "dev:client": "astro dev",
+    "build:client": "astro build",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "llamaindex": "bun server/data/llamaindex.ts",
+    "parse-streaming-history": "bun server/data/parse-streaming-history.ts"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/svelte": "^5.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@elysiajs/cors": "^0.8.0",
+    "@elysiajs/static": "^0.8.1",
+    "@elysiajs/stream": "^0.8.0",
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "astro": "^4.3.1",
+    "autoprefixer": "^10.4.16",
+    "elysia": "^0.8.15",
+    "llamaindex": "^0.1.9",
+    "lodash.debounce": "^4.0.8",
+    "postcss": "^8.4.32",
+    "svelte": "^4.2.8",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/lodash.debounce": "^4.0.9",
+    "prettier": "latest",
+    "prettier-plugin-astro": "latest",
+    "prettier-plugin-svelte": "latest",
+    "typescript": "latest"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-svelte",
+      "prettier-plugin-astro"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

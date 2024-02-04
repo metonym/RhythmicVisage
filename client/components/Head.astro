@@ -1,0 +1,17 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+const url = new URL(Astro.url.pathname.replace(/\/$/, ""), Astro.site);
+const canonical_url = url.href.replace(/\.html$/, "");
+---
+
+<link rel="canonical" href={canonical_url} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Archivo+Black"
+  rel="stylesheet"
+/>
+
+<ViewTransitions transition:animate="none" />
